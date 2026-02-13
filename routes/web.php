@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NurasyahController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/to-nurasyah', [NurasyahController::class, 'index'])->name('nurasyah.index');
+Route::get('/', [NurasyahController::class, 'index'])->name('home');
