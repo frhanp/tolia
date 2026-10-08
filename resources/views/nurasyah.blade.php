@@ -755,13 +755,18 @@
 
     <!-- FOOTER -->
     <footer class="py-10 sm:py-12 border-t border-romantic-200 text-center text-slate-500 text-xs sm:text-sm">
-        <div class="max-w-4xl mx-auto px-4 space-y-2 sm:space-y-3">
+        <div class="max-w-4xl mx-auto px-4 space-y-3">
             <p class="font-serif text-base sm:text-lg text-slate-700 font-medium">
                 Made with all my heart for <span class="text-romantic-600 font-script text-xl sm:text-2xl font-normal">{{ $recipient }}</span>
             </p>
-            <p class="text-[11px] sm:text-xs text-slate-400">
-                Forever & Always • {{ $sender }} &copy; {{ date('Y') }}
-            </p>
+            <div class="flex items-center justify-center gap-4 text-[11px] sm:text-xs text-slate-400">
+                <span>Forever & Always • {{ $sender }} &copy; {{ date('Y') }}</span>
+                <span>•</span>
+                <a href="{{ route('admin.index') }}" class="inline-flex items-center gap-1 text-romantic-500 hover:text-romantic-700 hover:underline font-medium">
+                    <span>⚙️</span>
+                    <span>Love Studio</span>
+                </a>
+            </div>
         </div>
     </footer>
 
